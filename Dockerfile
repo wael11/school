@@ -1,7 +1,8 @@
 FROM wodby/openjdk:17-alpine
 WORKDIR /app
 EXPOSE 8089
-COPY target/school-1.0.0-SNAPSHOT.jar app.jar
+COPY target/school-1.0.0.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
 
 
