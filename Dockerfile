@@ -1,7 +1,7 @@
 FROM wodby/openjdk:17-alpine
+WORKDIR /app
 EXPOSE 8089
-#ADD http://192.168.50.4:8081/repository/maven-release/tn/m104/rh/school/1.0.0/school-1.0.0.jar .
-ADD target/school-1.0.0.jar .
-ENTRYPOINT ["java", "-jar", "/school-1.0.0.jar"]
+COPY target/school-1.0.0-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
 
 
